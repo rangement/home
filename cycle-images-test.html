@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/yellowneon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>test carrousel</title>
+  </head>
+
+        <title>slides</title>
+        <script type="text/javascript">
+            var images = [
+            "images/1.png",
+            "images/2.png",
+            "images/3.png",
+            "images/4.png",
+            "images/5.png",
+            "images/6.png",
+            "images/7.png",
+            "images/8.png",
+            "images/11.png",
+            "images/12.png",
+            "images/13.gif",
+            "images/15.gif",
+            "images/16.png",
+            "images/17.png",
+            "images/18.png",
+            "images/19.png",
+            "images/20.png",
+            "images/21.png",
+            "images/22.png",
+            "images/23.png",
+            "images/24.png",
+            "images/25.png",
+            "images/26.png",
+            "images/27.png",
+            "images/28.png",
+            ];
+
+            var currentpic = 0;
+            var lastpic = images.length-1;
+            function nextslide()
+            {
+                if (currentpic == lastpic)
+                {
+                    currentpic = 0;
+                    document.getElementById('slide').src = images[currentpic];
+                }
+                else
+                {
+                    currentpic++;
+                    document.getElementById('slide').src = images[currentpic];
+                }
+            }
+        </script>   
+    </head>
+    <body>
+        <img src="images/1.png"" id="slide" onclick="nextslide()">
+    </body>
+</html>

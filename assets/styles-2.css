@@ -1,0 +1,74 @@
+html{
+  overflow: hidden;
+}
+
+@font-face {
+  font-family:'Neue';
+  src: url('images/font/NHaasGroteskTXPro-55Rg.ttf') format('truetype'),
+       url('images/font/neuehaas-regular.eot') format('embedded-opentype'),
+       url('images/font/NeueHaasGrotesk-Roman.otf') format('opentype'),
+       url('images/font/NeueHaasGrotesk-Roman.woff') format('woff');
+}
+
+body {
+  padding: 0;
+  font-family: sans-serif;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    background-color:white;
+    font-family:'Neue', Arial, sans-serif;
+}
+
+#container {
+overflow: hidden;
+overflow-x: hidden;
+height: 100vh;
+width: 100vw;
+}
+
+#img{
+  width: 60%;
+  height: 90vh;
+  margin-left: 20%;
+  clear: both;
+}
+
+#img #slide{
+padding: 1em;
+height: 100%;
+box-sizing: border-box;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+#desc{
+  width: 60%;
+  margin-left: 20%;
+  clear: both;
+  height: 10vh;
+  color: black;
+  padding-top: 1em;
+  font-size: 15pt;
+}
+
+/*#desc:hover,#img:hover{
+  background-color: beige;
+}*/
+
+img { 
+  filter: grayscale(100);
+
+}
+
+img:hover { 
+  filter: grayscale(0);
+  transition-duration: 0.15s;
+}
+
+
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <link rel="icon" href="assets/yellowneon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles-2.css">
+    <title>test carrousel</title>
+  </head>
+
+        <script type="text/javascript">
+            let images = [
+            "assets/11.png",
+            "assets/assets-11/1.png",
+            ];
+
+            let currentpic = 0;
+            let lastpic = images.length-1;
+            function nextslide()
+            {
+                if (currentpic == lastpic)
+                {
+                    currentpic = 0;
+                    document.getElementById('slide').src = images[currentpic];
+                }
+                else
+                {
+                    currentpic++;
+                    document.getElementById('slide').src = images[currentpic];
+                }
+            }
+
+
+        </script>   
+    </head>
+    
+    <body>
+        <div id="back">
+        <a href="file:///Users/theiaflynn/theiafn@github.io/hi/index.html">back</a>
+        </div>
+
+        <div id="container">
+            <div id="img">
+                <img src="assets/11.png"" id="slide" onclick="nextslide()">
+            </div>
+            
+            <div id="desc">
+                (04.2019) Theia is a recent graduate from the Rhode Island School of Design (GD.19). 
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,256 @@
+
+
+@font-face {
+  font-family:'Neue';
+  src: url('assets/font/Theinhardt-Regular.otf') format('embedded-opentype');
+}
+
+
+
+html {
+  overflow-x: hidden;
+  background-color: #F5F5F5;
+}
+
+/*
+__________________________________________________________________________________________________
+*/
+
+.draggable{
+  width:100vw;
+  position: absolute;
+  z-index: 0;
+}
+
+.top {z-index: 2; position: relative}
+.bottom {z-index: 1; position: relative}
+
+.ui-draggable-handle {
+  -ms-touch-action: none;
+  touch-action: none;
+}
+
+.ui-widget-content {
+ /* outline:solid 1.25px red; */
+  /*float:left;*/
+}
+
+/*
+__________________________________________________________________________________________________
+*/
+
+
+body {
+  padding: 0;
+  font-family: sans-serif;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+  mix-blend-mode: difference;
+}
+
+a:active{
+  color:black;
+  text-decoration: none;
+}
+
+a:visited{
+  color:black;
+  text-decoration: none;
+}
+
+.numbers{
+font-size: 14pt;
+}
+
+.content a{
+color: blue;
+}
+
+#container {
+overflow-x: hidden;
+display:block;
+font-family:'Neue', Arial, sans-serif;
+}
+
+#area img{
+  position: absolute;
+  margin: 1.75em 1.75em 6em 1.75em;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  background-color: #F5F5F5;
+  display:block;
+}
+
+#area div{
+  margin: 5em;
+}
+
+#area p{
+  position: absolute;
+}
+
+.hello{
+  position: absolute;
+}
+
+.hi{
+  margin:-0.13em;
+  font-family:'Neue', Arial, serif;
+  z-index:-10;
+  color: black;
+  margin-top: -0.35em;
+  padding-top: 1em;
+  padding-left: 0.75em;
+  font-size: 24pt;
+  height: 100vh;
+  width: 100vw;
+  border-bottom: solid black 1pt;
+  background-color: #00784c;
+}
+
+.hi #date{
+  position: sticky;
+  bottom:0px;
+  padding-right: 4em;
+  font-size: 24pt;
+
+}
+
+.hi #name{
+  position: fixed;
+}
+
+.hi #about{
+  position: fixed;
+  margin-left: 50vw;
+}
+
+.hi #contact{
+  position: fixed;
+  margin-left: 75vw;
+}
+
+/*#hi2{
+  position: fixed;
+  z-index:500;
+  margin-left: -8em;
+  color: black;
+  font-size: 16pt;
+  transform: rotate(-90deg);
+  border-bottom: solid black 0.5pt;
+  top:16em;
+}
+*/
+
+/*#hi3{
+ background-color: white;
+  position: fixed;
+  z-index:600;
+  margin-left:6.20em;
+  margin-right: 0.5em;
+  color: black;
+  padding: 0.20em;
+  outline: solid 1px black;
+  font-size: 30pt;
+  max-height: 1.22em;
+  max-height: 1.22em;
+  overflow: scroll;
+  bottom: 0.5em;
+}*/
+
+/*.more {
+    padding: 0;
+    font-size: 1em;
+}
+
+.initial {
+    padding: 0;
+    font-size: 30pt;
+}*/
+
+/*.content {
+    background-color:white;
+    display:none;*/
+    /*font-size: 24px;*/
+/*    font-size: 15px;
+    margin: -0.08em;
+}
+*/
+
+/*.content {
+  padding: 20px;
+  display: none;
+  z-index:400;
+  background-color: white;
+  margin:0.5em;
+  margin-right:1em;
+  color: black;
+  padding: 0.25em;
+  font-size: 11.5pt;
+  float: left;
+}
+*/
+/*#intro{
+  position: fixed;
+  z-index:400;
+  background-color: white;
+  margin:0.5em;
+  margin-right:1em;
+  color: black;
+  padding: 0.25em;
+  outline: solid 1px black;
+  font-size: 11.5pt;
+}
+*/
+/*#intro div{
+display:inline-block;
+}*/
+
+#video iframe{
+  position: absolute;
+}
+
+#dot svg{
+  position: absolute;
+}
+
+img:hover { 
+  cursor: pointer;
+  cursor: -moz-pointer;
+  cursor: -webkit-pointer;
+  scale: 200%;
+  filter: grayscale(0);
+  border: none;
+  border-color: black;
+  transition-duration: 0.15s;
+}
+
+img { 
+  filter: grayscale(100);
+}
+
+iframe{ 
+  filter: grayscale(100);
+}
+
+iframe:hover{ 
+  filter: grayscale(0);
+  transition-duration: 0.15s;
+}
+
+ img:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+

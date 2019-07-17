@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <link rel="icon" href="assets/yellowneon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>t's site</title>
+  </head>
+ 
+  <body>
+
+<div class="hello">
+    <div class="hi">
+      <div id="sub-hi">
+        <a id="name" href = "file:///Users/theiaflynn/theiafn@github.io/hi/index.html">Theia Flynn</a>
+        <a id="about" href = "file:///Users/theiaflynn/theiafn@github.io/hi/index.html">About</a>
+        <a id="contact" href = "file:///Users/theiaflynn/theiafn@github.io/hi/index.html">Contact</a>
+      </div>
+      <div id="date">
+      <a>Theia is a recent graduate from the Rhode Island School of Design (GD.19). Originally from Geneva, Switzerland. Enjoys: collecting pictures <a href="https://www.are.na/theia-flynn/greetings-ykpl2ygiucq"><u>online</u></a>. Accumulating books for their covers, their content or just on impulse. Writing amateurishly but happily. The web as a platform for independent experiments. </a><a>Thank you for dropping by, </a><a id="para1"></a>. Say hi: <u>theia.flynn@gmail.com</u>.
+      </div>
+    </div>
+ </div>
+
+<!-- <div id="hi3" class="more">
+  <div class="initial"></a><option value="left"> ..&nbsp;&nbsp;</option></a></div>
+  <div class="content">
+    Is a recent graduate from the Rhode Island School of Design (GD.19). Originally from Geneva, Switzerland. Enjoys collecting pictures <a href="https://www.are.na/theia-flynn/greetings-ykpl2ygiucq">online</a>. Going to see live performances and <a href="  https://soundcloud.com/user-663175077/likes">listening</a> to music from all over, but electronic and 80s are favorite. Accumulating books for their covers, stories inside or just on impulse. Playing computer games, visual novels especially. Interest in the <a href="https://theiaflynn.github.io/  treehouse/index.html">web</a> and its smaller corners, and as a platform for independent experiments and self-publication. Wishing to build a sophisticated collection of whiskys. Stage-fright but not too crippling.
+    <a class="intro2" id="para">
+        <a href = "mailto:theiaflynn@gmail?subject = Feedback&body = Message">Thanks</a> for dropping by, on <a id="para1"></a>.</a>
+  </div>
+  </div>
+</div> -->
+
+<!--   <div id="intro">
+  <div id="intro_sub">
+    Theia is a recent graduate from the Rhode Island School of Design (GD.19). Originally from Geneva, Switzerland. Enjoys collecting pictures <a href="https://www.are.na/theia-flynn/greetings-ykpl2ygiucq">online</a>. Going to see live performances and <a href="  https://soundcloud.com/user-663175077/likes">listening</a> to music from all over, but electronic and 80s are favorite. Accumulating books for their covers, stories inside or just on impulse. Playing computer games, visual novels especially. Interest in self-publication. Interest in the <a href="https://theiaflynn.github.io/  treehouse/index.html">web</a> and its smaller corners, and as a platform for independent experiments. Writing amateurishly but happily. Interest in building a sophisticated collection of whiskys. Stage-fright but not too crippling.
+    <div class="intro2">
+      <a id="para">
+        <a href = "mailto:theiaflynn@gmail?subject = Feedback&body = Message">Thanks</a> for dropping by, on </a>
+        <a id="para1"><a>.
+        </a>
+      </a>
+    </div>
+  </div>
+  </div> -->
+
+    
+  <div id="container">
+      
+    <div id="video"></div>
+
+    <div id="dot"></div>
+
+    <div id="area">
+      
+    </div> 
+
+  </div> 
+
+
+  <script type="text/javascript">
+
+
+// $(".initial").click(function () {
+//     var effect = 'slide';
+//     var options = { direction: $('.more').val() };
+//     var duration = 100;
+//     $('.initial').hide();
+//     $('.content').toggle(effect, options, duration);
+// });
+
+// $(".content").click(function () {
+//     var duration = 0;
+//     $('.content').toggle(duration);
+//     $('.initial').show();
+// });
+
+
+
+ //1: Array of pictures 
+
+ let firstPic = 1;
+ let lastPic = 21;
+ let pics = Array(lastPic-firstPic+1)
+    .fill()
+    .map(() => "assets/" + firstPic++ + ".png");
+
+    // instead of writing it fully out:
+    // let pics =["assets/1.png","assets/2.png","assets/3.png","assets/4.png","assets/5.png","assets/6.png","assets/7.png","assets/8.png","assets/11.png","assets/12.png","assets/13.gif","assets/15.gif","assets/16.png","assets/17.png","assets/18.png","assets/19.png","assets/20.png","assets/21.png","assets/22.png","assets/23.png","assets/24.png","assets/25.png","assets/26.png","assets/27.png","assets/28.png",];
+
+    let img = '';
+      for(ii=0; ii<pics.length; ii++) {
+      positiontop = (Math.random()*20000) + window.innerHeight;
+      var w = window.innerWidth - 580;
+      positionright = Math.floor(Math.random() * w) + 80; 
+      sizing =  Math.floor(Math.random() * 290) + 280; 
+      zindex = ii;
+      number = ii+1;
+      img += '<div class="draggable"><a href="file:///Users/theiaflynn/theiafn@github.io/hi/index-'+ii+'.html"><img src="'+pics[ii]+'" content="'+ii+'" style= "top: '+positiontop+'px;'+'right: '+positionright+'px;'+'z-index: '+ zindex+';'+'width :'+sizing+'px;"></a><div class="numbers"><p style= "top: '+positiontop+'px;'+'right: '+positionright+'px;'+'z-index: '+ii+';">'+number+'</p></div></div>';
+    }
+
+
+    let width;
+    $(window).resize(function() {
+    width = $(window).width();
+    });
+
+    let iframe = '';
+    positiontop = Math.random()*20000;
+    var w = window.innerWidth - 580;
+    positionright = Math.floor(Math.random() * w) + 80; 
+    sizing =  Math.floor(Math.random() * 290) + 280; 
+    zindex = ii;
+    iframe += '<iframe src="https://player.vimeo.com/video/315539162" style="top: '+positiontop+'px;'+'right: '+positionright+'px;'+'z-index: '+zindex+';'+'height :'+sizing+'px;"  frameborder="0" width="640" height="400" allow="autoplay; fullscreen" allowfullscreen></iframe>'
+
+
+// __________________________________________________________________ DRAGGABLE DIVS
+
+      $(document).ready(function() {
+        
+        var a = 3;
+        
+        $('.draggable').draggable({
+          start: function(event, ui) { $(this).css("z-index", a++); }
+        });
+
+        $('body').click(function() {
+        $(this).addClass('top').removeClass('bottom');
+        $(this).siblings().removeClass('top').addClass('bottom');
+        $(this).css("z-index", a++);
+        });
+
+      });
+
+// __________________________________________________________________ /DRAGGABLE DIVS
+
+
+
+    // let dot = '';
+    // positiondot = Math.random()*400;
+    // dot += '<svg onClick="location.href=location.href" height="16.5" width="20" style="cursor: pointer; position:fixed; top: '+positiondot+'px;'+'right: '+positionright+'px;'+'z-index: 10000;"><circle cx="5" cy="5" r="4" fill="blue" stroke="uvpurple"/></svg>'
+
+
+
+  document.getElementById('area').innerHTML= img;
+  document.getElementById('video').innerHTML= iframe;
+  // document.getElementById('dot').innerHTML= dot;
+  
+  console.log(w);
+  console.log(positiontop);
+  console.log(positionright);
+  console.log(sizing);
+
+  // date stamp 
+
+  document.getElementById("para1").innerHTML = formatAMPM();
+
+  function formatAMPM() {
+    let d = new Date(),
+      minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
+      hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
+      ampm = d.getHours() >= 12 ? 'pm' : 'am',
+      months = ['January','February','March','April','May','June','July','August','September','October','November','December'],
+      days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+      at = "at";
+      return days[d.getDay()]+' '+months[d.getMonth()]+' '+d.getDate()+' '+d.getFullYear()+', '+at+' '+hours+':'+minutes+ampm;
+  }
+
+
+</script>
+
+  </body>
+
+<!--   <script src="script.js"></script> -->
+
+</html>
